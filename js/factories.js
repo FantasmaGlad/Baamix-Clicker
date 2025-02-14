@@ -1,4 +1,3 @@
-<file>
 // factories.js - Factory logic and calculations
 
 export const factories = [

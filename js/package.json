@@ -1,0 +1,30 @@
+{
+  "name": "baamix-clicker",
+  "version": "5.1.0",
+  "description": "Baamix Clicker - Un jeu web clicker engageant et compétitif.",
+  "main": "index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "firebase": "^9.22.0",
+    "howler": "^2.2.3",
+    "tailwindcss": "^3.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "vite": "^4.0.0"
+  },
+  "keywords": [
+    "clicker",
+    "game",
+    "baamix",
+    "firebase",
+    "tailwindcss"
+  ],
+  "author": "FantaGames",
+  "license": "MIT"
+}

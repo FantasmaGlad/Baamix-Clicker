@@ -1,0 +1,75 @@
+/* Styles généraux pour BaaClicker */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: url('../assets/images/Fonds/fondjeubaamix.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  min-height: 100vh; /* Ensure body covers full viewport height */
+  display: flex; /* Enable flexbox on body */
+  flex-direction: column; /* Stack header, main, footer vertically */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Allow container to take up remaining vertical space */
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.0); /* Make header background transparent */
+  box-shadow: none; /* Remove header shadow */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #6a5acd;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 0; /* Remove top margin from title */
+  margin-bottom: 1rem; /* Add bottom margin to separate from game area */
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.0); /* Make footer background transparent */
+  box-shadow: none; /* Remove footer shadow */
+  color: #fff; /* Set footer text color to white for better visibility on background */
+}
+
+footer p {
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  background-color: #6a5acd;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #5a4db2;
+  transform: scale(1.05);
+}
+
+/* Liens généraux */
+a {
+  color: #6a5acd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

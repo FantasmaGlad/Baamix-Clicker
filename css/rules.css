@@ -1,0 +1,25 @@
+/* Styles for the rules content */
+
+.rules-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .rules-content h2 {
+    font-size: 1.5rem;
+    color: #6a5acd;
+    margin-bottom: 1rem;
+  }
+  
+  .rules-content p, .rules-content li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .rules-content ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }

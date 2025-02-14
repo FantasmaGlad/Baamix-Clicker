@@ -1,47 +1,46 @@
-<diff>
-@@ -3,7 +3,7 @@
- 
- .sidebar-left .quete {
-   width: 100%; /* Quests take full width of sidebar */
--  background-color: rgba(255, 255, 255, 0.9);
-+  background-color: rgba(240, 240, 240, 0.9); /* Lighter background for quests */
-   padding: 1rem;
-   margin-bottom: 1rem;
-   border-radius: 1rem;
-@@ -13,7 +13,7 @@
- 
- .sidebar-left .quete h3 {
-   font-size: 1.2rem;
--  color: #6a5acd;
-+  color: #555; /* Darker color for quest titles */
-   margin-bottom: 0.5rem;
- }
- 
-@@ -25,7 +25,7 @@
- .progress-bar-container {
-   width: 100%;
-   height: 20px;
--  background-color: #e0e0e0;
-+  background-color: #ddd; /* Lighter progress bar background */
-   border-radius: 10px;
-   overflow: hidden;
-   margin: 0.5rem 0;
-@@ -33,7 +33,7 @@
- 
- .progress-bar {
-   height: 100%;
--  background-color: #32cd32;
-+  background-color: #88b04b; /* Muted green for progress bar */
-   width: 0%;
-   transition: width 0.3s ease;
- }
-@@ -47,7 +47,7 @@
-   .sidebar-left .quete button {
-   margin-top: 1rem;
-   padding: 0.5rem 1rem;
--  font-size: 0.9rem;
-+  font-size: 0.8rem; /* Slightly smaller button text */
-   color: #fff;
-   background-color: #6a5acd;
-   border: none;
-</diff>
+.sidebar-left .quete {
+  width: 100%; /* Quests take full width of sidebar */
+  background-color: rgba(240, 240, 240, 0.9); /* Lighter background for quests */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-left .quete h3 {
+  font-size: 1.2rem;
+  color: #555; /* Darker color for quest titles */
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd; /* Lighter progress bar background */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #88b04b; /* Muted green for progress bar */
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.sidebar-left .quete button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem; /* Slightly smaller button text */
+  color: #fff;
+  background-color: #6a5acd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-left .quete button:hover {
+  background-color: #5b4cbf;
+}

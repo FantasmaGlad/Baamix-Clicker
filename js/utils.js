@@ -1,4 +1,3 @@
-<file>
 // utils.js - Utility functions
 
 // Optimized number formatting - consider memoization for performance if needed in future
@@ -9,4 +8,3 @@ export function formatNumber(number) {
   }
   return number.toLocaleString();
 }
-</file>

@@ -1,100 +1,20 @@
-/* Styles pour la page principale (index.html) */
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: url('../assets/images/Fonds/fondjeubaamix.webp') no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #6a5acd;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  margin-top: 1rem;
-}
-
-.game {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.sidebar-left, .sidebar-right {
-  width: 20%;
-  max-width: 300px;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  overflow-y: auto;
-  height: 80%;
-}
-
-.main-area {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#baamix-button {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-#baamix-button:hover {
-  transform: scale(1.1);
-}
-
-.score {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem 0;
-}
-
-.menu button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #6a5acd;
-  border: none;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.menu button:hover {
-  background-color: #5a4db2;
-  transform: scale(1.05);
-}
-
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
+<diff>
+@@ -44,7 +44,7 @@
+   flex-grow: 1;
+ }
+ 
+-.sidebar-left, .sidebar-right {
++.sidebar-left, .sidebar-right{
+   width: 20%;
+   max-width: 300px;
+   padding: 1rem;
+@@ -52,6 +52,8 @@
+   border-radius: 1rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   overflow-y: auto;
++  display: flex;
++  flex-direction: column;
+   height: 80%;
+ }
+ 
+</diff>

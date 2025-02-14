@@ -1,29 +1,56 @@
-<diff>
-@@ -14,11 +14,11 @@
- 
-     <main>
-       <div class="game">
--        <aside id="quests-container" class="sidebar-left">
-+        <div id="quests-container" class="sidebar-left">
-           <!-- Quests will be injected here -->
--        </aside>
-+        </div>
- 
--        <div class="main-area">
-+        <div id="main-area" class="main-area">
-           <img src="./assets/images/Skins/baamixbg.png" id="baamix-button" alt="Baamix" >
-           <div class="score">
-             <p id="baamix-score">0 Baamix</p>
-@@ -26,9 +26,9 @@
-           </div>
-         </div>
- 
--        <aside id="factories-container" class="sidebar-right">
-+        <div id="factories-container" class="sidebar-right">
-           <!-- Factories will be injected here -->
--        </aside>
-+        </div>
-       </div>
- 
-       <div class="menu">
-</diff>
+<file>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BaaClicker - Le Clicker Compétitif</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/skins.css">
+  <link rel="stylesheet" href="./css/rules.css">
+  <link rel="stylesheet" href="./css/conditions.css">
+  <link rel="stylesheet" href="./css/quetes.css">
+  <link rel="stylesheet" href="./css/usines.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Usine à Baamix de...</h1>
+    </header>
+
+    <main>
+      <div class="game">
+        <div id="quests-container" class="sidebar-left">
+          <!-- Quests will be injected here -->
+        </div>
+
+        <div id="main-area" class="main-area">
+          <img src="./assets/images/Skins/baamixbg.png" id="baamix-button" alt="Baamix" >
+          <div class="score">
+            <p id="baamix-score">0 Baamix</p>
+            <p id="baamix-per-second">par seconde : 0</p>
+          </div>
+        </div>
+
+        <div id="factories-container" class="sidebar-right">
+          <!-- Factories will be injected here -->
+        </div>
+      </div>
+
+      <div class="menu">
+        <button id="skins-button">Skins</button>
+        <button id="rules-button">Règles</button>
+        <button id="conditions-button">Conditions</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 FantaGames. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
+</file>

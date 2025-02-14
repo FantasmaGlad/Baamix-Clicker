@@ -1,6 +1,12 @@
+<file>
 // utils.js - Utility functions
 
+// Optimized number formatting - consider memoization for performance if needed in future
 export function formatNumber(number) {
-    // Add commas for thousands, millions, etc.
-    return number.toLocaleString();
+  if (typeof number !== 'number') {
+    console.warn('formatNumber: Input is not a number.'); // Input validation
+    return '0'; // Or handle non-number input appropriately
   }
+  return number.toLocaleString();
+}
+</file>

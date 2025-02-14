@@ -1,83 +1,73 @@
-// Gestion de la base de données Firebase
+<file>
+// database.js - Firebase database interactions
 
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, get, update } from "firebase/database";
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, set, get, update } from 'firebase/database';
 
-// Configuration Firebase
+// Firebase configuration - Replace with your actual Firebase config
 const firebaseConfig = {
-  apiKey: "VOTRE_API_KEY",
-  authDomain: "VOTRE_AUTH_DOMAIN",
-  databaseURL: "VOTRE_DATABASE_URL",
-  projectId: "VOTRE_PROJECT_ID",
-  storageBucket: "VOTRE_STORAGE_BUCKET",
-  messagingSenderId: "VOTRE_MESSAGING_SENDER_ID",
-  appId: "VOTRE_APP_ID",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// Initialisation Firebase
+// Initialize Firebase app and database
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// Fonction pour sauvegarder les données utilisateur dans Firebase
-function sauvegarderDonneesUtilisateur(uid, donnees) {
-  const reference = ref(database, `utilisateurs/${uid}`);
-  set(reference, donnees)
-    .then(() => {
-      console.log("Données sauvegardées avec succès.");
-    })
-    .catch((error) => {
-      console.error("Erreur lors de la sauvegarde des données :", error);
-    });
+// Function to save user data to Firebase
+async function sauvegarderDonneesUtilisateur(uid, donnees) {
+  try {
+    const reference = ref(database, `utilisateurs/${uid}`);
+    await set(reference, donnees);
+    console.log('User data saved successfully to Firebase.');
+  } catch (error) {
+    console.error('Error saving user data to Firebase:', error);
+    // Consider more robust error handling: retry mechanism, user notification
+    throw new Error('Failed to save data to Firebase.');
+  }
 }
 
-// Fonction pour charger les données utilisateur depuis Firebase
-function chargerDonneesUtilisateur(uid) {
-  const reference = ref(database, `utilisateurs/${uid}`);
-  return get(reference)
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        return snapshot.val();
-      } else {
-        console.log("Aucune donnée trouvée pour cet utilisateur.");
-        return null;
-      }
-    })
-    .catch((error) => {
-      console.error("Erreur lors du chargement des données :", error);
-      return null;
-    });
-}
-
-// Fonction pour mettre à jour les données utilisateur
-function mettreAJourDonneesUtilisateur(uid, nouvellesDonnees) {
-  const reference = ref(database, `utilisateurs/${uid}`);
-  update(reference, nouvellesDonnees)
-    .then(() => {
-      console.log("Données mises à jour avec succès.");
-    })
-    .catch((error) => {
-      console.error("Erreur lors de la mise à jour des données :", error);
-    });
-}
-
-// Gestion de la synchronisation entre localStorage et Firebase
-function synchroniserDonnees(uid, donneesLocalStorage) {
-  chargerDonneesUtilisateur(uid).then((donneesFirebase) => {
-    if (!donneesFirebase) {
-      // Si aucune donnée Firebase, sauvegarder les données locales
-      sauvegarderDonneesUtilisateur(uid, donneesLocalStorage);
+// Function to load user data from Firebase
+async function chargerDonneesUtilisateur(uid) {
+  try {
+    const reference = ref(database, `utilisateurs/${uid}`);
+    const snapshot = await get(reference);
+    if (snapshot.exists()) {
+      console.log('User data loaded successfully from Firebase.');
+      return snapshot.val();
     } else {
-      // Fusionner les données locales et Firebase
-      const donneesFusionnees = { ...donneesFirebase, ...donneesLocalStorage };
-      sauvegarderDonneesUtilisateur(uid, donneesFusionnees);
+      console.log('No data found for user in Firebase.');
+      return null; // Or return a default data object
     }
-  });
+  } catch (error) {
+    console.error('Error loading user data from Firebase:', error);
+    // Handle load errors gracefully, possibly return default local data
+    return null;
+  }
 }
 
-// Export des fonctions pour utilisation
+// Function to update user data in Firebase
+async function mettreAJourDonneesUtilisateur(uid, nouvellesDonnees) {
+  try {
+    const reference = ref(database, `utilisateurs/${uid}`);
+    await update(reference, nouvellesDonnees);
+    console.log('User data updated successfully in Firebase.');
+  } catch (error) {
+    console.error('Error updating user data in Firebase:', error);
+    // Handle update errors, possibly retry or notify user
+    throw new Error('Failed to update data in Firebase.');
+  }
+}
+
 export {
   sauvegarderDonneesUtilisateur,
   chargerDonneesUtilisateur,
   mettreAJourDonneesUtilisateur,
-  synchroniserDonnees,
+  database, // Export database instance if needed elsewhere
 };
+</file>

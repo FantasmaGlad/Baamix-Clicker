@@ -1,11 +1,27 @@
-<diff>
-@@ -3,7 +3,7 @@
- 
- .rules-content {
-     padding: 20px;
--    background-color: rgba(255, 255, 255, 0.9);
-+    background-color: rgba(240, 240, 240, 0.9); /* Lighter background for rules */
-     border-radius: 10px;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   }
-</diff>
+.rules-content {
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9); /* Lighter background for rules */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rules-content h2 {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.rules-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.rules-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.rules-content li {
+  margin-bottom: 5px;
+}

@@ -1,4 +1,3 @@
-<file>
 // auth.js - User authentication with Google Firebase
 
 import { initializeApp } from 'firebase/app';
@@ -46,4 +45,3 @@ async function deconnexionUtilisateur() {
 }
 
 export { connexionGoogle, deconnexionUtilisateur, auth };
-</file>

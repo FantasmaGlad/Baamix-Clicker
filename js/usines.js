@@ -78,7 +78,7 @@ function genererHTMLUsines(points) {
 
     return `
       <div class="usine" id="usine-${usine.id}">
-        <img src="${imageSrc}" alt="${usine.nom}" class="image-usine" />
+        <img src="${imageSrc}" alt="${usine.nom}" class="image-usine" onerror="this.onerror=null; this.src='assets/images/image-placeholder.png';" />
         <h3>${usine.nom}</h3>
         <p>Coût : ${usine.cout} Baamix</p>
         <p>Production : ${usine.productionParSeconde} Baamix/sec</p>
@@ -91,7 +91,7 @@ function genererHTMLUsines(points) {
 
 // Fonction pour mettre à jour les usines dans l'UI
 function mettreAJourUsines(points) {
-  const conteneurUsines = document.getElementById("conteneur-usines");
+  const conteneurUsines = document.getElementById("factories-container");
   conteneurUsines.innerHTML = genererHTMLUsines(points);
 }
 

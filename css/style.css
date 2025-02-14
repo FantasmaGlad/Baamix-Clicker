@@ -1,38 +1,38 @@
-<diff>
-@@ -11,7 +11,7 @@
-   margin: 0;
-   padding: 0;
-   font-family: 'Comic Sans MS', cursive, sans-serif;
--  background: url('../assets/images/Fonds/fondjeubaamix.webp') no-repeat center center fixed;
-+  background: url('../assets/images/Fonds/fondjeubaamix.webp') no-repeat center center fixed; /* Keep background image */
-   background-size: cover;
-   color: #333;
-   min-height: 100vh; /* Ensure body covers full viewport height */
-@@ -24,7 +24,7 @@
- }
- 
- header {
--  text-align: center;
-+  text-align: center; /* Keep header text centered */
-   padding: 1rem;
-   background-color: rgba(255, 255, 255, 0.0); /* Make header background transparent */
-   box-shadow: none; /* Remove header shadow */
-@@ -38,7 +38,7 @@
- }
- 
- footer {
--  text-align: center;
-+  text-align: center; /* Keep footer text centered */
-   font-size: 0.9rem;
-   padding: 1rem;
-   background-color: rgba(255, 255, 255, 0.0); /* Make footer background transparent */
-@@ -50,7 +50,7 @@
- }
- 
- button {
--  font-size: 1rem;
-+  font-size: 0.9rem; /* Slightly smaller button font size */
-   padding: 0.8rem 1.5rem;
-   color: #fff;
-   background-color: #6a5acd;
-</diff>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: url('../assets/images/Fonds/fondjeubaamix.webp') no-repeat center center fixed; /* Keep background image */
+  background-size: cover;
+  color: #333;
+  min-height: 100vh; /* Ensure body covers full viewport height */
+}
+
+header {
+  text-align: center; /* Keep header text centered */
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.0); /* Make header background transparent */
+  box-shadow: none; /* Remove header shadow */
+}
+
+footer {
+  text-align: center; /* Keep footer text centered */
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.0); /* Make footer background transparent */
+}
+
+button {
+  font-size: 0.9rem; /* Slightly smaller button font size */
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  background-color: #6a5acd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5b4cbf;
+}

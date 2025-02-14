@@ -1,4 +1,3 @@
-<file>
 // database.js - Firebase database interactions
 
 import { initializeApp } from 'firebase/app';

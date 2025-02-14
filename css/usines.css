@@ -1,38 +1,38 @@
-<diff>
-@@ -3,7 +3,7 @@
- 
- .sidebar-right .usine {
-   width: 100%; /* Factories take full width of sidebar */
--  background-color: rgba(255, 255, 255, 0.9);
-+  background-color: rgba(240, 240, 240, 0.9); /* Lighter background for factories */
-   padding: 1rem;
-   margin-bottom: 1rem;
-   border-radius: 1rem;
-@@ -12,7 +12,7 @@
- 
- .sidebar-right .usine h3 {
-   font-size: 1.2rem;
--  color: #6a5acd;
-+  color: #555; /* Darker color for factory titles */
-   margin-bottom: 0.5rem;
- }
- 
-@@ -24,7 +24,7 @@
- .sidebar-right .usine img {
-   width: 80px;
-   height: 80px;
--  margin: 0.5rem 0;
-+  margin: 0.5rem auto; /* Center images in factory boxes */
-   border-radius: 10%;
- }
- 
-@@ -32,7 +32,7 @@
-   .sidebar-right .usine button {
-   margin-top: 1rem;
-   padding: 0.5rem 1rem;
--  font-size: 0.9rem;
-+  font-size: 0.8rem; /* Slightly smaller button text */
-   color: #fff;
-   background-color: #6a5acd;
-   border: none;
-</diff>
+.sidebar-right .usine {
+  width: 100%; /* Factories take full width of sidebar */
+  background-color: rgba(240, 240, 240, 0.9); /* Lighter background for factories */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-right .usine h3 {
+  font-size: 1.2rem;
+  color: #555; /* Darker color for factory titles */
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-right .usine img {
+  width: 80px;
+  height: 80px;
+  margin: 0.5rem auto; /* Center images in factory boxes */
+  border-radius: 10%;
+  display: block; /* Ensure image is centered */
+}
+
+.sidebar-right .usine button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem; /* Slightly smaller button text */
+  color: #fff;
+  background-color: #6a5acd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar-right .usine button:hover {
+  background-color: #5b4cbf;
+}

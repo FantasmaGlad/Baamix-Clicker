@@ -1,4 +1,3 @@
-<file>
 // dom.js - DOM manipulation and UI updates
 
 const scoreDisplay = document.getElementById('baamix-score');

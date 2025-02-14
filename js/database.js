@@ -70,4 +70,3 @@ export {
   mettreAJourDonneesUtilisateur,
   database, // Export database instance if needed elsewhere
 };
-</file>

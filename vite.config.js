@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 
 export default defineConfig({
-  root: './', // Project root is the current directory
+  root './', // Project root is the current directory
   build: {
     outDir: 'dist', // Output directory for the build
     emptyOutDir: true, // Clean the output directory before building

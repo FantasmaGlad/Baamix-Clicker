@@ -1,4 +1,3 @@
-<file>
 // menu.js - Menu functionality and content loading
 
 export function setupMenu() {
@@ -36,4 +35,3 @@ async function loadContent(page) {
     alert(`Failed to load content: ${error.message}`);
   }
 }
-</file>

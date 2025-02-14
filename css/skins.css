@@ -1,55 +1,11 @@
-/* Styles for the skins menu */
-
-.skins-menu {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .skins-menu h2 {
-    font-size: 1.5rem;
-    color: #6a5acd;
-    margin-bottom: 1rem;
-  }
-  
-  .skin-options {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .skin-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px; /* Adjust as needed */
-  }
-  
-  .skin-item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skin-item p {
-    margin-bottom: 0.5rem;
-  }
-  
-  .skin-item button {
-    padding: 0.5rem 1rem;
-    background-color: #6a5acd;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .skin-item button:hover {
-    background-color: #48d1cc;
-  }
+<diff>
+@@ -3,7 +3,7 @@
+ 
+ .skins-menu {
+     padding: 20px;
+-    background-color: rgba(255, 255, 255, 0.9);
++    background-color: rgba(240, 240, 240, 0.9); /* Lighter background for skins menu */
+     border-radius: 10px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     text-align: center;
+</diff>

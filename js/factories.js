@@ -80,4 +80,3 @@ export function buyFactory(factoryId, currentPoints) {
   factory.cost = Math.floor(factory.cost * 1.10); // Cost increases by 10%
   return { success: true, updatedPoints: currentPoints - actualCost, updatedFactory: factory };
 }
-</file>

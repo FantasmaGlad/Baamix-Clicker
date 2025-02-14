@@ -1,17 +1,16 @@
-<file>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BaaClicker - Le Clicker Compétitif</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/skins.css">
-  <link rel="stylesheet" href="./css/rules.css">
-  <link rel="stylesheet" href="./css/conditions.css">
-  <link rel="stylesheet" href="./css/quetes.css">
-  <link rel="stylesheet" href="./css/usines.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/skins.css">
+  <link rel="stylesheet" href="css/rules.css">
+  <link rel="stylesheet" href="css/conditions.css">
+  <link rel="stylesheet" href="css/quetes.css">
+  <link rel="stylesheet" href="css/usines.css">
 </head>
 <body>
   <div class="container">
@@ -21,28 +20,32 @@
 
     <main>
       <div class="game">
-        <div id="quests-container" class="sidebar-left">
+        <!-- Left sidebar for quests -->
+        <aside id="quests-container" class="sidebar-left">
           <!-- Quests will be injected here -->
-        </div>
+        </aside>
 
-        <div id="main-area" class="main-area">
-          <img src="./assets/images/Skins/baamixbg.png" id="baamix-button" alt="Baamix" />
+        <!-- Main game area -->
+        <section id="main-area" class="main-area">
+          <img src="assets/images/Skins/baamixbg.png" id="baamix-button" alt="Baamix, clique pour produire">
           <div class="score">
             <p id="baamix-score">0 Baamix</p>
             <p id="baamix-per-second">par seconde : 0</p>
           </div>
-        </div>
+        </section>
 
-        <div id="factories-container" class="sidebar-right">
+        <!-- Right sidebar for factories -->
+        <aside id="factories-container" class="sidebar-right">
           <!-- Factories will be injected here -->
-        </div>
+        </aside>
       </div>
 
-      <div class="menu">
+      <!-- Menu section -->
+      <nav class="menu">
         <button id="skins-button">Skins</button>
         <button id="rules-button">Règles</button>
         <button id="conditions-button">Conditions</button>
-      </div>
+      </nav>
     </main>
 
     <footer>
@@ -50,7 +53,6 @@
     </footer>
   </div>
 
-  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
-</file>

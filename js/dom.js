@@ -59,4 +59,3 @@ export function updateQuests(quests) {
   }).join('');
   questsContainer.innerHTML = questsHTML;
 }
-</file>

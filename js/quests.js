@@ -1,4 +1,3 @@
-<file>
 // quests.js - Quests management and UI updates
 
 export let quests = [
@@ -58,5 +57,3 @@ export function loadQuests(savedQuests) {
 export function saveQuests() {
   // Saving quests is now handled in saveGameData in main.js to keep all save logic centralized
 }
-
-</file>

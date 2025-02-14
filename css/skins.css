@@ -1,11 +1,29 @@
-<diff>
-@@ -3,7 +3,7 @@
- 
- .skins-menu {
-     padding: 20px;
--    background-color: rgba(255, 255, 255, 0.9);
-+    background-color: rgba(240, 240, 240, 0.9); /* Lighter background for skins menu */
-     border-radius: 10px;
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-     text-align: center;
-</diff>
+.skins-menu {
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9); /* Lighter background for skins menu */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.skins-menu h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #444; /* Darker color for title */
+}
+
+.skins-menu .skin-option {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.skins-menu .skin-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}

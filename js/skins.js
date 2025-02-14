@@ -1,4 +1,3 @@
-<file>
 // skins.js - Skin management and application
 
 const baamixButton = document.getElementById('baamix-button'); // Cache button element
@@ -65,4 +64,3 @@ function loadSavedSkin() {
 }
 
 document.addEventListener('DOMContentLoaded', setupSkins);
-</file>
